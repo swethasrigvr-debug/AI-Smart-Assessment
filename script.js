@@ -176,7 +176,7 @@ function initLogin() {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const email = form.querySelector("[type='email']");
-      const password = form.querySelector("[type='password'], [type='text']");
+      const password = form.querySelector("[data-password-field]");
       const error = form.querySelector(".error");
       const strong = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
       if (!email.value.includes("@")) {
