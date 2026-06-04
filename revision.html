@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revision Hub | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="revision">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav"><a href="dashboard.html">Dashboard</a><a href="exam.html">Assessment</a><a href="analytics.html">Analytics</a><a class="active" href="revision.html">Revision</a><a href="certificate.html">Certificate</a></nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><h1 style="font-size:2rem">Revision Hub</h1><p>Important questions, topic notes, flashcards, practice quizzes, and AI-generated suggestions.</p></div>
+        <div class="toolbar"><input id="revisionSearch" aria-label="Search revision content" placeholder="Search topics"><button class="btn btn-secondary" data-tts="Revision hub contains important questions, notes, flashcards, and practice quizzes.">Read</button></div>
+      </div>
+
+      <section class="grid grid-3">
+        <article class="card revision-item"><span class="badge">Important</span><h3>Electrical safety</h3><p>Know PPE, lockout-tagout basics, and safe tool handling.</p><button class="btn btn-secondary bookmark">Bookmark</button></article>
+        <article class="card revision-item"><span class="badge">Notes</span><h3>Assessment fairness</h3><p>Rubrics, consistent instructions, accommodations, and audit trails reduce bias.</p><button class="btn btn-secondary bookmark">Bookmark</button></article>
+        <article class="card revision-item"><span class="badge">Practice</span><h3>Employability skills</h3><p>Communication, workplace readiness, digital tools, and problem solving.</p><button class="btn btn-secondary bookmark">Bookmark</button></article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top:1rem">
+        <article class="card">
+          <h3>Flashcards</h3>
+          <div class="flashcard" tabindex="0" role="button" aria-label="Flip flashcard">
+            <div class="flash-inner"><strong>What is adaptive difficulty?</strong><span>Click to reveal: AI changes question difficulty based on answer patterns.</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <h3>AI revision suggestions</h3>
+          <p>Spend 20 minutes on safety rules, then attempt 5 medium questions and one practical checklist.</p>
+          <div class="progress"><span style="width:55%"></span></div>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top:1rem">
+        <h3>Practice quiz</h3>
+        <p>Which evaluation type best confirms hands-on competency?</p>
+        <div class="toolbar"><button class="btn btn-secondary">MCQ exam</button><button class="btn btn-success">Practical assessment</button><button class="btn btn-secondary">Attendance</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

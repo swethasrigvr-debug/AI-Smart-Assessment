@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Exam | SkillSetu</title>
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body data-page="exam">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav"><a href="dashboard.html">Dashboard</a><a class="active" href="exam.html">Assessment</a><a href="analytics.html">Analytics</a><a href="revision.html">Revision</a></nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><h1 style="font-size:2rem">Adaptive MCQ Exam</h1><p>Mode: Online with offline resume simulation and autosave.</p></div>
+        <div class="toolbar"><span class="badge">Timer: <strong id="timer">15:00</strong></span><button class="btn btn-secondary" data-tts="Read the question carefully and choose one option.">Read instructions</button></div>
+      </div>
+      <div id="examResult" aria-live="polite"></div>
+      <section class="exam-shell" aria-live="polite">
+        <div class="question-box">
+          <div class="toolbar"><span class="badge">Question <span id="questionNumber">1</span> / <span id="totalQuestions">0</span></span><span class="badge">Difficulty: <span id="difficulty">Easy</span></span><span class="badge">Topic: <span id="topic">Safety</span></span></div>
+          <div class="progress" style="margin:1rem 0"><span id="progressBar" style="width:0%"></span></div>
+          <h2 id="questionText" style="font-size:1.6rem"></h2>
+          <div id="options" role="radiogroup" aria-label="Answer options"></div>
+          <p id="examMessage" class="error" aria-live="polite"></p>
+          <div class="toolbar"><button id="prevQuestion" class="btn btn-secondary">Previous</button><button id="nextQuestion" class="btn btn-secondary">Next</button><button id="submitExam" class="btn btn-primary">Submit exam</button><button id="resetExam" class="btn btn-secondary" type="button">Reset</button></div>
+        </div>
+        <aside class="question-box">
+          <h3>Question palette</h3>
+          <div id="palette" class="palette"></div>
+          <h3>AI performance pattern</h3>
+          <p>Correct answers increase difficulty. Wrong answers shift to easier competency checks.</p>
+          <p><span class="badge">Adaptive</span> <span class="badge">Autosave</span> <span class="badge">Resume</span></p>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="script.js?v=5"></script>
+</body>
+</html>

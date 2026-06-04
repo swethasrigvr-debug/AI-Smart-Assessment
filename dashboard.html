@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav" aria-label="Dashboard navigation">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="exam.html">Assessment</a>
+        <a href="analytics.html">Analytics</a>
+        <a href="revision.html">Revision</a>
+        <a href="certificate.html">Certificate</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </aside>
+    <main id="main" class="main">
+      <div class="topbar">
+        <div><h1 style="font-size:2rem">Welcome, <span class="candidate-name"></span></h1><p class="candidate-course"></p></div>
+        <div class="toolbar">
+          <button id="notifyBtn" class="btn btn-secondary">Notifications</button>
+          <button class="btn btn-secondary" data-dark-toggle>Dark mode</button>
+        </div>
+      </div>
+
+      <section class="grid grid-3">
+        <article class="dashboard-card"><span class="badge">Profile</span><h3><span class="avatar">AS</span> Candidate</h3><p>Mode: Blended | Language: English/Hindi | PWD support enabled</p></article>
+        <article class="dashboard-card"><h3>Assessment progress</h3><div class="stat" data-target="68" data-suffix="%">0%</div><div class="progress"><span style="width:68%"></span></div></article>
+        <article class="dashboard-card"><h3>Performance summary</h3><div class="stat" data-target="82" data-suffix="%">0%</div><p>Badge: Job-ready foundation</p></article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top:1rem">
+        <article class="dashboard-card">
+          <h3>Upcoming exams</h3>
+          <table><tr><td>MCQ trade theory</td><td>Today</td></tr><tr><td>Practical station</td><td>24 May</td></tr><tr><td>Viva voce</td><td>26 May</td></tr></table>
+        </article>
+        <article class="dashboard-card">
+          <h3>AI recommendations</h3>
+          <p>Revise safety scenarios, attempt one hard-level quiz, and enable text-to-speech during long descriptive questions.</p>
+          <a class="btn btn-primary" href="revision.html">Open Revision Hub</a>
+        </article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top:1rem">
+        <article class="dashboard-card"><h3>Skill analytics</h3><div class="chart" aria-label="Skill chart"><span class="bar" style="height:70%"></span><span class="bar" style="height:52%"></span><span class="bar" style="height:88%"></span><span class="bar" style="height:64%"></span><span class="bar" style="height:76%"></span></div></article>
+        <article class="dashboard-card">
+          <h3>Accessibility preferences</h3>
+          <div class="toolbar">
+            <button class="btn btn-secondary" data-font="0.1">A+</button>
+            <button class="btn btn-secondary" data-font="-0.1">A-</button>
+            <button class="btn btn-secondary" data-contrast-toggle>High contrast</button>
+            <button class="btn btn-secondary" data-tts="Dashboard summary. Your progress is sixty eight percent and your score trend is improving.">Read summary</button>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <section id="notificationPanel" class="notification-panel"><h3>Notifications</h3><p>Autosave enabled for exam resume.</p><p>Offline pack synced for practical assessment.</p></section>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="certificate">
+  <div class="app-layout">
+    <aside class="sidebar no-print">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav"><a href="dashboard.html">Dashboard</a><a href="exam.html">Assessment</a><a href="analytics.html">Analytics</a><a href="revision.html">Revision</a><a class="active" href="certificate.html">Certificate</a></nav>
+    </aside>
+    <main class="main">
+      <div class="topbar no-print">
+        <div><h1 style="font-size:2rem">Certificate Generation</h1><p>Printable and downloadable completion certificate layout.</p></div>
+        <button id="downloadCert" class="btn btn-primary">Download Certificate</button>
+      </div>
+      <section class="certificate" aria-label="Completion certificate">
+        <div class="certificate-border">
+          <p class="eyebrow">Certificate of Skill Assessment Completion</p>
+          <h1 style="font-size:3rem">SkillSetu</h1>
+          <p>This certifies that</p>
+          <h2 id="certName">Candidate Name</h2>
+          <p>has successfully completed the inclusive AI-driven assessment for</p>
+          <h3 id="certCourse">Course Name</h3>
+          <p>Score: <strong id="certScore">82%</strong></p>
+          <p>Completion date: <strong id="certDate"></strong></p>
+          <p>Unique certificate ID: <strong id="certId"></strong></p>
+          <p>Issued for online, offline, and blended skill assessment readiness.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

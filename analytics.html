@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="analytics">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav"><a href="dashboard.html">Dashboard</a><a href="exam.html">Assessment</a><a class="active" href="analytics.html">Analytics</a><a href="revision.html">Revision</a><a href="certificate.html">Certificate</a></nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><h1 style="font-size:2rem">Wrong Answer Analysis</h1><p>AI feedback, weak-topic detection, and real-time performance insights.</p></div>
+        <button class="btn btn-secondary" data-dark-toggle>Dark mode</button>
+      </div>
+
+      <section class="grid grid-4 grid-3">
+        <article class="dashboard-card"><h3>Accuracy</h3><div class="stat" data-target="82" data-suffix="%">0%</div></article>
+        <article class="dashboard-card"><h3>Avg. time</h3><div class="stat" data-target="54" data-suffix="s">0s</div></article>
+        <article class="dashboard-card"><h3>Rank</h3><div class="stat" data-target="12">0</div><p>Among 340 candidates</p></article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top:1rem">
+        <article class="dashboard-card">
+          <h3>Score trends</h3>
+          <div class="chart"><span class="bar" style="height:45%"></span><span class="bar" style="height:58%"></span><span class="bar" style="height:62%"></span><span class="bar" style="height:74%"></span><span class="bar" style="height:82%"></span></div>
+        </article>
+        <article class="dashboard-card">
+          <h3>Topic performance</h3>
+          <div class="donut" style="--value:76"><strong>76%</strong></div>
+          <p>Weak topic: <strong id="weakTopic">Safety</strong></p>
+        </article>
+      </section>
+
+      <section style="margin-top:1rem">
+        <div class="section-head"><h2>Incorrect questions</h2><p>Each card shows the selected answer, correct answer, explanation, and improvement path.</p></div>
+        <div id="wrongList" class="grid grid-2"></div>
+      </section>
+
+      <section class="grid grid-3" style="margin-top:1rem">
+        <article class="card"><h3>AI feedback</h3><p>Practice two scenario-based items in the weak topic, then retake a medium-level quiz.</p></article>
+        <article class="card"><h3>Improvement suggestion</h3><p>Use flashcards for definitions and request text-to-speech for lengthy explanations.</p></article>
+        <article class="card"><h3>Candidate ranking</h3><p>Your rank is improving due to better accuracy and reduced skipped questions.</p></article>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

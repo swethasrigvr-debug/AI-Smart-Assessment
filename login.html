@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page" data-page="login">
+  <main class="auth-card" aria-labelledby="loginTitle">
+    <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+    <h1 id="loginTitle" style="font-size:2rem;margin-top:1rem">Secure access</h1>
+    <p>Candidate, admin, and registration flows with validation and session-ready UI.</p>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-tab="candidateForm" type="button">Candidate</button>
+      <button class="tab-btn" data-tab="adminForm" type="button">Admin</button>
+      <button class="tab-btn" data-tab="registerForm" type="button">Register</button>
+    </div>
+
+    <form id="candidateForm" class="auth-form active" data-role="candidate">
+      <div class="field"><label>Email</label><div class="input-wrap"><input type="email" value="candidate@example.in" required></div></div>
+      <div class="field"><label>Password</label><div class="input-wrap"><input type="password" value="SkillIndia1" required><button type="button" class="toggle-password">Show</button></div></div>
+      <label><input type="checkbox"> Remember me on this device</label>
+      <p><a href="#">Forgot password?</a></p>
+      <p class="error" aria-live="polite"></p>
+      <button class="btn btn-primary" type="submit">Login as candidate</button>
+    </form>
+
+    <form id="adminForm" class="auth-form" data-role="admin">
+      <div class="field"><label>Admin email</label><div class="input-wrap"><input type="email" value="admin@skillsetu.in" required></div></div>
+      <div class="field"><label>Password</label><div class="input-wrap"><input type="password" value="Admin2026" required><button type="button" class="toggle-password">Show</button></div></div>
+      <label><input type="checkbox"> Keep session active for this shift</label>
+      <p class="error" aria-live="polite"></p>
+      <button class="btn btn-primary" type="submit">Login as admin</button>
+    </form>
+
+    <form id="registerForm" class="auth-form" data-role="candidate">
+      <div class="field"><label>Full name</label><div class="input-wrap"><input id="registerName" type="text" value="Aarav Sharma" required></div></div>
+      <div class="field"><label>Email</label><div class="input-wrap"><input type="email" value="new.candidate@example.in" required></div></div>
+      <div class="field"><label>Course</label><div class="input-wrap"><input id="registerCourse" type="text" value="Solar PV Installer" required></div></div>
+      <div class="field"><label>Password</label><div class="input-wrap"><input type="password" value="Candidate1" required><button type="button" class="toggle-password">Show</button></div></div>
+      <p class="error" aria-live="polite"></p>
+      <button class="btn btn-success" type="submit">Create account</button>
+    </form>
+    <p><small>Privacy notice: this static demo stores sample session data in your browser only.</small></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

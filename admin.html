@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel | SkillSetu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span><span>SkillSetu</span></a>
+      <nav class="side-nav"><a href="dashboard.html">Dashboard</a><a href="exam.html">Assessment</a><a href="analytics.html">Analytics</a><a href="revision.html">Revision</a><a class="active" href="admin.html">Admin</a></nav>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <div><h1 style="font-size:2rem">Admin Panel</h1><p>Manage users, assessments, adaptive settings, reports, and candidate performance.</p></div>
+        <div class="toolbar"><button class="btn btn-secondary" data-dark-toggle>Dark mode</button><button class="btn btn-primary">Export reports</button></div>
+      </div>
+
+      <section class="grid grid-3">
+        <article class="dashboard-card"><h3>Active candidates</h3><div class="stat" data-target="340">0</div></article>
+        <article class="dashboard-card"><h3>Assessments uploaded</h3><div class="stat" data-target="28">0</div></article>
+        <article class="dashboard-card"><h3>Adaptive strictness</h3><input type="range" min="1" max="10" value="6" aria-label="Adaptive difficulty strictness"></article>
+      </section>
+
+      <section class="grid grid-2" style="margin-top:1rem">
+        <article class="card">
+          <h3>Add question</h3>
+          <form id="questionForm">
+            <div class="field"><label>Question</label><textarea id="adminQuestion" required>Which PPE is mandatory for electrical work?</textarea></div>
+            <div class="field"><label>Topic</label><input id="adminTopic" value="Safety" required></div>
+            <div class="field"><label>Difficulty</label><select id="adminDifficulty"><option>Easy</option><option>Medium</option><option>Hard</option></select></div>
+            <button class="btn btn-primary">Add question</button>
+          </form>
+        </article>
+        <article class="card">
+          <h3>Candidate monitoring</h3>
+          <table><tr><td>Aarav Sharma</td><td>82%</td><td>Online</td></tr><tr><td>Meera Nair</td><td>91%</td><td>Blended</td></tr><tr><td>Rafiq Khan</td><td>74%</td><td>Offline sync</td></tr></table>
+        </article>
+      </section>
+
+      <section class="card" style="margin-top:1rem">
+        <div class="toolbar" style="justify-content:space-between"><h3>Question bank</h3><button class="btn btn-secondary">Upload assessment</button></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Question</th><th>Topic</th><th>Difficulty</th><th>Actions</th></tr></thead>
+            <tbody id="questionTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid grid-3" style="margin-top:1rem">
+        <article class="card"><h3>Security controls</h3><p>Session timeout prompts, validation, privacy notice, and controlled exports.</p></article>
+        <article class="card"><h3>Analytics dashboard</h3><p>Track accuracy, time spent, ranking, and topic mastery at center level.</p></article>
+        <article class="card"><h3>Multi-language UI</h3><p>English, Hindi, Marathi, Tamil, Telugu, Bengali, and regional language readiness.</p></article>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
